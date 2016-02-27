@@ -9,22 +9,18 @@ class HelloWorld : public cocos2d::Layer
 public:
 	Sprite* ball;
 	Sprite* paddle;
-	Sprite* edgeSp;
-
+	Sprite* border;
 	PhysicsWorld* m_world;
 
 	void setPhyWorld(PhysicsWorld* world) { m_world = world; };
-	// Touch event
 	void onTouchMoved(Touch *touch, Event *event);
 	void onTouchEnded(Touch *touch, Event *event);
-
 	bool onTouchBegan(Touch *touch, Event *event);
-
 	bool onContactBegin(PhysicsContact &contact);
+	void tick(float);
 
 	static cocos2d::Scene* createScene();
 	virtual bool init();
 
 	CREATE_FUNC(HelloWorld);
-
 };

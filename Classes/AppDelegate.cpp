@@ -15,7 +15,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 	auto director = Director::getInstance();
 	auto glview = director->getOpenGLView();
 	if (!glview) {
-		glview = GLViewImpl::create("Breakout");
+		glview = GLViewImpl::create("BREAK- -OUT!");
 		glview->setFrameSize(640, 480);
 		director->setOpenGLView(glview);
 	}
