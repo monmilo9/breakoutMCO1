@@ -20,6 +20,8 @@ public:
 
 	bool onTouchBegan(Touch *touch, Event *event);
 
+	bool onContactBegin(PhysicsContact &contact);
+
 	static cocos2d::Scene* createScene();
 	virtual bool init();
 
